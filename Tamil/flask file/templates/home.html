@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Loan Approval Prediction</title>
+  </head>
+  <style type="text/css">
+    *{
+      text-decoration: none;
+
+    }
+    .navbar{
+      background: blue;font-family: calibri;padding-right: 15px;padding-left: 15px;
+    }
+    .navdiv{
+      display: flex;align-items: center;justify-content: space-between;
+    }
+    .logo a{
+      font-size: 35px;font-weight: 600px; color: white;
+    }
+    li{
+      list-style: none;display: inline-block;
+
+    }li a{
+      color: white;font-size: 18px;font-weight: bold;margin-right: 25px;
+    }
+    header{
+      background-color: blue;
+      height: 60px;
+    }
+   .er{
+    float: right;
+    margin-top: 10px;
+    color: white  ;
+    margin-right: 40px;
+    text-decoration: none;
+    
+    font-size: 25px;
+   }
+   a{
+    color: white;
+
+   }
+   .qw{
+    font-size: 25px;
+    float: left;
+    margin-top: 10px;
+   }
+   h1{
+    font-size: 40px;
+    text-align: center;
+    color: blue;
+    
+   }
+   label{
+    color: black;
+    font-size: 20px;
+   }
+   input{
+    float: right;
+    width: 200px;
+    border-radius: 30px;
+    
+   }
+   select{
+    width: 207px;
+    border-radius: 30px;
+    float: right;
+    
+   }
+   form{
+    margin-left: 400px;
+    width: 600px;
+    background-color: transparent;
+   }
+   #bn{
+    width: 206px;
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    border: 2px solid whitesmoke;
+    height: 40px;
+   }
+  img{
+    width: 1350px;
+    z-index: -1;
+    position: absolute;
+  }
+  </style>
+  <body>
+    <nav class="navbar">
+      <div class="navdiv">
+        <div class="logo"><a href="#">loan approval</a></div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="img">
+      <img src="{{url_for('static',filename='download1.avif')}}">
+    </div>
+    <h1>Loan Approval Prediction</h1>
+    <form action="/submit" method="POST">
+      <label for="gender">Gender:</label>
+      <select id="gender" name="Gender">
+        <option value="1">Male</option>
+        <option value="0">Female</option>
+      </select><br><br>
+
+      <label for="married">Married:</label>
+      <select id="married" name="Married">
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select><br><br>
+
+      <label for="dependents">Number of Dependents:</label>
+      <input type="number" id="dependents" name="Dependents"><br><br>
+
+      <label for="education">Education:</label>
+      <select id="education" name="Education">
+        <option value="1">Graduate</option>
+        <option value="0">Not Graduate</option>
+      </select><br><br>
+
+      <label for="self-employed">Self Employed:</label>
+      <select id="self-employed" name="Self_Employed">
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select><br><br>
+
+      <label for="applicant-income">Applicant Income:</label>
+      <input type="number" id="applicant-income" name="ApplicantIncome"><br><br>
+
+      <label for="coapplicant-income">Coapplicant Income:</label>
+      <input type="number" id="coapplicant-income" name="CoapplicantIncome"><br><br>
+
+      <label for="loan-amount">Loan Amount:</label>
+      <input type="number" id="loan-amount" name="LoanAmount"><br><br>
+
+      <label for="loan-amount-term">Loan Amount Term (in months):</label>
+      <input type="number" id="loan-amount-term" name="Loan_Amount_Term"><br><br>
+
+      <label for="credit-history">Credit History:</label>
+      <select id="credit-history" name="Credit_History">
+        <option value="1">Good</option>
+        <option value="0">Bad</option>
+      </select><br><br>
+
+      <label for="property-area">Property Area:</label>
+      <select id="property-area" name="Property_Area">
+        <option value="0">Rural</option>
+        <option value="1">Semiurban</option>
+        <option value="2">Urban</option>
+      </select><br><br>
+
+      <input id="bn" type="submit" value="Submit">
+    </form>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Loan Approval Prediction</title>
+  </head><style type="text/css">
+    *{
+      text-decoration: none;
+
+    }
+    .navbar{
+      background: blue;font-family: calibri;padding-right: 15px;padding-left: 15px;
+    }
+    .navdiv{
+      display: flex;align-items: center;justify-content: space-between;
+    }
+    .logo a{
+      font-size: 35px;font-weight: 600px; color: white;
+    }
+    li{
+      list-style: none;display: inline-block;
+
+    }li a{
+      color: white;font-size: 18px;font-weight: bold;margin-right: 25px;
+    }
+     img{
+    width: 1350px;
+    z-index: -1;
+    position: absolute;
+  }
+  h1{
+    width: 500px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid whitesmoke;
+  }
+  p{
+    text-align: center;
+    font-size: 30px;
+    color:white;
+    margin-top: 150px;
+    
+  }
+  
+  </style>
+  <body>
+    <nav class="navbar">
+      <div class="navdiv">
+        <div class="logo"><a href="#">loan approval</a></div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <div class="img">
+      <img src="{{url_for('static',filename='output.jpg')}}">
+    </div>
+    <center><h1>Loan Approval Prediction</h1></center>
+    <p>{{ result }}</p>
+    
+  </body>
+
+</html>
